@@ -1,4 +1,4 @@
-package org.example;
+package org.example.booking;
 
 public class MovieTicketServer {
     public String movieTitle;
