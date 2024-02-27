@@ -9,7 +9,7 @@ public class MovieTicketServer {
         this.availableSeats = availableSeats;
     }
 
-    public void bookTicket(String customerName, int numberOfSeats) {
+    public synchronized void bookTicket(String customerName, int numberOfSeats) {
         System.out.println("Hi, " + customerName + ". There are: " +
                             this.availableSeats + " seats available for " +
                             this.movieTitle);
@@ -23,6 +23,6 @@ public class MovieTicketServer {
         this.availableSeats -= numberOfSeats;
 
         System.out.println("Hi, " + customerName + ". There was: " + numberOfSeats +
-                            "successfully booked for " + this.movieTitle);
+                            " successfully booked for " + this.movieTitle);
     }
 }

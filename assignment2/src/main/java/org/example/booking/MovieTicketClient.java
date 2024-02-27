@@ -5,14 +5,14 @@ public class MovieTicketClient extends Thread {
     private int numberOfTickets;
     private MovieTicketServer server;
 
-    public MovieTicketClient(String customerName, int numberOfTickets, MovieTicketServer server) {
+    public MovieTicketClient(MovieTicketServer server, String customerName, int numberOfTickets) {
+        this.server = server;
         this.customerName = customerName;
         this.numberOfTickets = numberOfTickets;
-        this.server = server;
     }
 
     @Override
     public void run() {
-
+        server.bookTicket(customerName, numberOfTickets);
     }
 }

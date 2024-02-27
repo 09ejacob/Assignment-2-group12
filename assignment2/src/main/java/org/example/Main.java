@@ -1,3 +1,5 @@
+package org.example;
+
 import org.example.booking.MovieTicketServer;
 import org.example.booking.MovieTicketClient;
 
